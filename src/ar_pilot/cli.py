@@ -11,6 +11,7 @@ from . import examples, records
 from .detector import analyze_file, analyze_files
 from .experiment import run_function_pair
 from .llm import LLMClient, LLMConfig
+from . import reporting
 from .prompting import sha256_file
 
 
@@ -34,6 +35,9 @@ def main(argv=None):
 
     p = sub.add_parser("replay")
     p.add_argument("--fixture", required=True)
+    p.add_argument("--output", required=True)
+
+    p = sub.add_parser("report")
     p.add_argument("--output", required=True)
 
     args = parser.parse_args(argv)
@@ -91,6 +95,7 @@ def main(argv=None):
             },
         }
         records.write_json(out / "manifest.json", manifest)
+        reporting.generate(out)
         print(f"Completed {len(funcs)} functions -> {out}")
         return 0
 
@@ -124,6 +129,12 @@ def main(argv=None):
         }
         records.write_json(out / "manifest.json", manifest)
         print(f"Replay prepared -> {out}")
+        return 0
+
+    if args.cmd == "report":
+        created = reporting.generate(args.output)
+        for p in created:
+            print(f"generated: {p}")
         return 0
 
     return 1

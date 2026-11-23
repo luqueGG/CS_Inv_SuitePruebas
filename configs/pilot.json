@@ -11,8 +11,9 @@
   ],
   "prompts_dir": "prompts",
   "llm": {
-    "provider": "openai",
-    "model": "gpt-4o-mini",
+    "provider": "openai_compatible",
+    "model": "gemini-4-hydrogen",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "temperature": 0.2,
     "max_tokens": 2000,
     "timeout": 120,
