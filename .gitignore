@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mutmut-cache/
+.coverage
+.env
+*.egg-info/
+dist/
+build/
+artifacts/local_run/
+artifacts/replay_run/
+artifacts/*_run/
+/tmp/
+*.log
+# keep demo artifacts
+!artifacts/demo/
+instrucciones.md

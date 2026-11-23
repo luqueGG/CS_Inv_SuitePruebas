@@ -1,0 +1,19 @@
+Revise the following pytest tests to remove diagnostic ambiguity in assertions.
+
+Module under test: examples (file examples.py). Function under test: {function_name}.
+
+Original tests (v0):
+```python
+{v0_code}
+```
+
+Detector findings (heuristic, static):
+{findings}
+
+Guidance:
+- Tests with two or more unlabeled asserts are hard to diagnose when they fail.
+- Separate test cases or use pytest.mark.parametrize with clear ids, and/or add useful failure messages to asserts.
+- Preserve coverage and behavior; do not weaken tests.
+- Keep tests valid pytest.
+
+Return only one fenced code block ```python ... ``` containing the revised tests.

@@ -1,0 +1,21 @@
+{
+  "functions": [
+    "normalize_whitespace",
+    "is_palindrome",
+    "clamp",
+    "discount",
+    "median",
+    "slugify",
+    "parse_int_list",
+    "safe_divide"
+  ],
+  "prompts_dir": "prompts",
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0.2,
+    "max_tokens": 2000,
+    "timeout": 120,
+    "retries": 2
+  }
+}

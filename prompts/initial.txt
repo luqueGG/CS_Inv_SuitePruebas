@@ -1,0 +1,16 @@
+You are a test engineer. Write pytest tests for the following Python function.
+
+Module under test: examples (file examples.py). Import functions from `examples`.
+
+Function name: {function_name}
+Specification and source:
+```python
+{source}
+```
+
+Requirements:
+- Use pytest.
+- Cover normal, edge, and error cases.
+- Each test function should start with test_.
+- Do not include explanations outside the code block.
+- Return only one fenced code block ```python ... ``` containing the tests.

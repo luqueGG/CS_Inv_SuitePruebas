@@ -1,0 +1,16 @@
+Revise the following pytest tests to improve clarity, quality, and maintainability.
+
+Module under test: examples (file examples.py). Keep the same function under test: {function_name}.
+
+Original tests (v0):
+```python
+{v0_code}
+```
+
+Generic guidance:
+- Improve naming, structure, and readability.
+- Remove duplication where appropriate.
+- Preserve coverage and behavior; do not change what is being tested.
+- Keep tests valid pytest.
+
+Return only one fenced code block ```python ... ``` containing the revised tests. Do not mention Assertion Roulette or assertion messages specifically.
