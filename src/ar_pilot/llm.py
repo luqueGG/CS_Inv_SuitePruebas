@@ -43,6 +43,7 @@ class LLMConfig:
 
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> "LLMConfig":
+        load_dotenv()
         cfg = cls()
         for k, v in d.items():
             if hasattr(cfg, k) and v is not None:
